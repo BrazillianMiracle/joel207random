@@ -1,65 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella Annac - Moda Feminina</title>
+    <meta name="description" content="Bella Annac - Boutique de Moda Feminina Premium. Coleções exclusivas e tendências internacionais.">
+    <title>Bella Annac | Boutique de Luxo Feminina</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="container header-container">
-            <div class="logo">BELLA ANNAC</div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#produtos">Coleção</a></li>
-                    <li><a href="#contato">Contato</a></li>
+    <header class="header" id="mainHeader">
+        <div class="header__container container">
+            <div class="header__logo">
+                <a href="#">BELLA <span>ANNAC</span></a>
+            </div>
+            
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#home" class="header__link">Home</a></li>
+                    <li class="header__item"><a href="#sobre" class="header__link">A Marca</a></li>
+                    <li class="header__item"><a href="#produtos" class="header__link">Coleções</a></li>
+                    <li class="header__item"><a href="#depoimentos" class="header__link">Reviews</a></li>
+                    <li class="header__item"><a href="#faq" class="header__link">FAQ</a></li>
                 </ul>
             </nav>
+
+            <div class="header__actions">
+                <a href="https://www.instagram.com/brazillianmiracle/" target="_blank" class="header__icon"><i class="fab fa-instagram"></i></a>
+                <button class="header__btn-mobile" id="btnMobile"><i class="fas fa-bars"></i></button>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
-        <img src="images/hero.jpg" alt="Bella Annac Hero Banner" class="hero-image">
-        <div class="hero-content">
-            <h1>Coleção Exclusiva Bella Annac</h1>
-            <p>Sinta-se poderosa com o melhor da moda feminina.</p>
-            <a href="#produtos" class="btn-primary">Ver Catálogo</a>
-        </div>
-    </section>
-
-    <main class="container" id="produtos">
-        <h2 class="section-title">Destaques da Semana</h2>
-        <div class="product-grid" id="productGrid">
+    <main>
+        <section class="hero" id="home">
+            <div class="hero__bg" style="background-image: url('images/hero.jpg');"></div>
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <span class="hero__subtitle">Estilo que define você</span>
+                <h1 class="hero__title">Sofisticação em cada detalhe.</h1>
+                <p class="hero__text">Descubra a coleção que está redefinindo o conceito de moda feminina premium no Brasil.</p>
+                <div class="hero__btns">
+                    <a href="#produtos" class="btn btn--primary">Explorar Coleção</a>
+                    <a href="#sobre" class="btn btn--outline">Conheça a Marca</a>
+                </div>
             </div>
+        </section>
+
+        <section class="about section" id="sobre">
+            <div class="container about__grid">
+                <div class="about__info">
+                    <h2 class="section__title">Nossa Essência</h2>
+                    <p class="section__description">A Bella Annac nasceu para a mulher contemporânea que não abre mão da elegância e do conforto. Cada peça é selecionada com curadoria rigorosa, focando em tecidos nobres e cortes impecáveis.</p>
+                    <ul class="about__list">
+                        <li><i class="fas fa-check-circle"></i> Tecidos Premium Importados</li>
+                        <li><i class="fas fa-check-circle"></i> Design Exclusivo Bella Annac</li>
+                        <li><i class="fas fa-check-circle"></i> Atendimento Personalizado</li>
+                    </ul>
+                </div>
+                <div class="about__stats">
+                    <div class="stat-item"><strong>10k+</strong> <span>Clientes Satisfeitas</span></div>
+                    <div class="stat-item"><strong>2026</strong> <span>Lançamento Coleção Gold</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog section" id="produtos">
+            <div class="container">
+                <div class="catalog__header">
+                    <h2 class="section__title text-center">Coleções Exclusivas</h2>
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all">Todas</button>
+                        <button class="filter-btn" data-filter="verao">Verão</button>
+                        <button class="filter-btn" data-filter="festa">Festa</button>
+                        <button class="filter-btn" data-filter="casual">Casual</button>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="mainGrid">
+                    </div>
+            </div>
+        </section>
+
+        <section class="testimonials section section--alt" id="depoimentos">
+            <div class="container">
+                <h2 class="section__title text-center">O que elas dizem</h2>
+                <div class="testimonials__grid">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"As peças são maravilhosas, o corte é perfeito e o rosa choque deles é vibrante como nenhum outro."</p>
+                        <h4>Mariana Silva</h4>
+                        <span>Cliente Gold</span>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="faq section" id="faq">
+            <div class="container container--narrow">
+                <h2 class="section__title text-center">Dúvidas Frequentes</h2>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <button class="faq__question">Como funciona a escolha de tamanhos? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq__answer">Possuímos uma tabela de medidas detalhada para cada peça. Ao clicar no produto, você pode selecionar o tamanho e conferir no WhatsApp.</div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__question">Qual o prazo de entrega? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq__answer">Entregamos para todo o Brasil via SEDEX com prazo médio de 3 a 7 dias úteis.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer" id="contato">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <h3>Bella Annac</h3>
-                <p>O melhor da moda feminina nacional e internacional diretamente para você.</p>
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <div class="footer__logo">BELLA <span>ANNAC</span></div>
+                <p>Moda de luxo acessível para mulheres que inspiram.</p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/brazillianmiracle/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h3>Contato</h3>
-                <p>Email: joelbentomarket@gmail.com</p>
-                <p>Tel: +55 (62) 99390-1617</p>
+            <div class="footer__col">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Nossa História</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
             </div>
-            <div class="footer-col">
-                <h3>Redes Sociais</h3>
-                <a href="https://www.instagram.com/brazillianmiracle/" target="_blank">Instagram</a>
+            <div class="footer__col">
+                <h4>Newsletter</h4>
+                <p>Receba ofertas exclusivas em primeira mão.</p>
+                <form class="footer__form">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+            <div class="footer__col">
+                <h4>Contato</h4>
+                <p><i class="fas fa-envelope"></i> joelbentomarket@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +55 (62) 99390-1617</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 Bella Annac - Todos os direitos reservados.
+        <div class="footer__bottom">
+            <p>&copy; 2026 Bella Annac Moda Feminina. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/55062993901617?text=quero%20conhecer%20todo%20o%20catalogo%20da%20loja" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <a href="https://wa.me/55062993901617?text=Quero%20conhecer%20todo%20o%20catálogo" class="wa-float" target="_blank">
+        <div class="wa-float__pulse"></div>
+        <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="script.js"></script>
